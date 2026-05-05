@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="app">
+
+    <div class="sidebar">
+        <h2>🤖 AI Chat</h2>
+        <p>Simple Chatbot</p>
+    </div>
+
+    <div class="chat-container">
+
+        <div id="messages" class="messages"></div>
+
+        <div class="input-area">
+            <input id="input" placeholder="Message..." 
+                onkeydown="if(event.key==='Enter') sendMessage()">
+            <button onclick="sendMessage()">➤</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
